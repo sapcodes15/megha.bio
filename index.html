@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mrs. Megha Anil Patil — Biology Educator</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-50: #f0faf0;
+    --green-100: #d4edda;
+    --green-200: #a8d5b5;
+    --green-400: #5aaa6e;
+    --green-600: #2d7a45;
+    --green-800: #1a4f2b;
+    --green-900: #0d2e18;
+    --earth-50: #faf7f2;
+    --earth-100: #f0e8d8;
+    --earth-300: #c9a97a;
+    --earth-600: #7a5c2e;
+    --earth-800: #4a3418;
+    --cream: #fdfbf7;
+    --leaf: #3d8b5e;
+    --moss: #2a5e3f;
+    --bark: #5c3d1e;
+    --parchment: #f5efe6;
+    --text-dark: #1c2b1e;
+    --text-mid: #3d5244;
+    --text-light: #6b7f6f;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(253,251,247,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--green-100);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--moss);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.875rem;
+    color: var(--text-mid);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--leaf); }
+  .nav-cta {
+    background: var(--leaf);
+    color: white !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--moss) !important; color: white !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: var(--green-50);
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+  .hero-text {
+    padding: 5rem 3rem 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--green-100);
+    color: var(--green-600);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  }
+  .hero-badge::before {
+    content: '🌿';
+    font-size: 0.9rem;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  .hero-title em {
+    color: var(--leaf);
+    font-style: italic;
+  }
+  .hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--text-mid);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .stat-item {
+    text-align: left;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--leaf);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--leaf);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 3rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s;
+    letter-spacing: 0.02em;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background: var(--moss);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45,122,69,0.25);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--moss);
+    padding: 0.85rem 2rem;
+    border-radius: 3rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid var(--green-400);
+    transition: all 0.25s;
+    display: inline-block;
+  }
+  .btn-outline:hover {
+    background: var(--green-50);
+    transform: translateY(-2px);
+  }
+
+  .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 4rem 4rem 2rem;
+    z-index: 1;
+    position: relative;
+  }
+  .photo-frame {
+    position: relative;
+    width: 380px;
+    height: 460px;
+  }
+  .photo-frame::before {
+    content: '';
+    position: absolute;
+    top: 16px; left: 16px;
+    right: -16px; bottom: -16px;
+    border: 2px solid var(--green-400);
+    border-radius: 60% 40% 50% 50% / 50% 40% 60% 50%;
+    z-index: 0;
+    opacity: 0.4;
+  }
+  .photo-blob {
+    width: 100%;
+    height: 100%;
+    border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background: var(--green-100);
+  }
+  .photo-blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, var(--green-100), var(--earth-100));
+  }
+  .photo-placeholder-icon {
+    font-size: 4rem;
+    opacity: 0.5;
+  }
+  .photo-placeholder-text {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-align: center;
+    padding: 0 2rem;
+  }
+  .floating-tag {
+    position: absolute;
+    background: white;
+    border: 1px solid var(--green-100);
+    border-radius: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .tag-1 { bottom: 60px; left: -30px; z-index: 2; }
+  .tag-2 { top: 60px; right: -30px; z-index: 2; }
+  .tag-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--leaf);
+  }
+
+  /* LEAF DECORATION */
+  .leaf-bg {
+    position: absolute;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  /* SECTION COMMONS */
+  section { padding: 5rem 0; }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--leaf);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .section-lead {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-width: 580px;
+    font-weight: 300;
+  }
+
+  /* ABOUT */
+  #about { background: white; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-quote {
+    background: var(--green-50);
+    border-left: 4px solid var(--leaf);
+    padding: 2rem 2rem 2rem 2.5rem;
+    border-radius: 0 1rem 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+  .about-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--moss);
+    line-height: 1.7;
+  }
+  .about-quote cite {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.75rem;
+    font-style: normal;
+  }
+  .about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .about-card {
+    background: var(--earth-50);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--earth-100);
+  }
+  .about-card-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .about-card h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+  }
+  .about-card p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+  .about-content p {
+    font-size: 1rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  .highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .highlight-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--leaf);
+    margin-top: 0.45rem;
+    flex-shrink: 0;
+  }
+  .highlight-item p { font-size: 0.95rem; color: var(--text-mid); line-height: 1.6; margin: 0; font-weight: 400; }
+
+  /* TEACHING */
+  #teaching { background: var(--parchment); }
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .subject-card {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--green-100);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .subject-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--leaf);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .subject-card:hover::before { transform: scaleX(1); }
+  .subject-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(45,122,69,0.12);
+  }
+  .subject-emoji { font-size: 2rem; margin-bottom: 1rem; }
+  .subject-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .subject-card p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  .subject-grades {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .grade-pill {
+    background: var(--green-50);
+    color: var(--green-600);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.25rem 0.6rem;
+    border-radius: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* BLOG & YOUTUBE */
+  #resources { background: white; }
+  .resources-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .resource-card {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 1px solid var(--green-100);
+    transition: all 0.3s;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+  .resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  }
+  .resource-header {
+    padding: 2.5rem 2rem 1.5rem;
+    position: relative;
+  }
+  .resource-header.yt { background: #fff3f3; }
+  .resource-header.blog { background: var(--green-50); }
+  .resource-header.ig { background: #fdf0f8; }
+  .resource-platform {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+  .resource-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+  .resource-icon {
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    width: 44px; height: 44px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+  .resource-icon.yt { background: #ff0000; color: white; }
+  .resource-icon.blog { background: var(--leaf); color: white; }
+  .resource-icon.ig { background: linear-gradient(135deg, #f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: white; }
+  .resource-body {
+    padding: 1.5rem 2rem 2rem;
+  }
+  .resource-body p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  .resource-link {
+    font-size: 0.875rem;
+    color: var(--leaf);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .resource-link::after { content: '→'; }
+
+  /* COACHING FORM */
+  #coaching { background: var(--green-800); position: relative; overflow: hidden; }
+  #coaching::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+    top: -200px; right: -200px;
+  }
+  #coaching::after {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.02);
+    bottom: -150px; left: -100px;
+  }
+  .coaching-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .coaching-info .section-tag { color: var(--green-200); }
+  .coaching-info .section-title { color: white; }
+  .coaching-info .section-lead { color: var(--green-200); }
+  .coaching-features {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .coaching-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--green-100);
+    font-size: 0.95rem;
+  }
+  .coaching-feature-icon {
+    width: 36px; height: 36px;
+    border-radius: 0.6rem;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .coaching-feature-text { line-height: 1.6; }
+  .coaching-feature-text strong { color: white; display: block; font-weight: 500; margin-bottom: 0.15rem; }
+
+  /* FORM */
+  .form-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+  }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .form-subtitle {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    border: 1.5px solid #e2e8e4;
+    border-radius: 0.75rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background: white;
+    transition: border-color 0.2s;
+    outline: none;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--leaf);
+    box-shadow: 0 0 0 3px rgba(61,139,94,0.12);
+  }
+  .form-submit {
+    width: 100%;
+    background: var(--leaf);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover {
+    background: var(--moss);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45,122,69,0.3);
+  }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+  }
+  .form-success-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .form-success h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--leaf);
+    margin-bottom: 0.5rem;
+  }
+  .form-success p { font-size: 0.9rem; color: var(--text-light); }
+
+  /* CONTACT */
+  #contact { background: var(--parchment); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .contact-icon {
+    width: 48px; height: 48px;
+    border-radius: 1rem;
+    background: var(--green-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+  .contact-item h4 { font-size: 0.85rem; color: var(--text-light); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.25rem; font-weight: 500; }
+  .contact-item p, .contact-item a {
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 400;
+  }
+  .contact-item a:hover { color: var(--leaf); }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid var(--green-100);
+    text-decoration: none;
+    transition: all 0.25s;
+    color: inherit;
+  }
+  .social-link:hover {
+    border-color: var(--green-400);
+    transform: translateX(6px);
+    box-shadow: 0 4px 16px rgba(45,122,69,0.1);
+  }
+  .social-link-icon {
+    width: 40px; height: 40px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .social-link-icon.yt { background: #fff0f0; }
+  .social-link-icon.ig { background: #fdf0f8; }
+  .social-link-icon.blog { background: var(--green-50); }
+  .social-link-name { font-weight: 500; font-size: 0.95rem; color: var(--text-dark); }
+  .social-link-handle { font-size: 0.8rem; color: var(--text-light); }
+  .social-link-arrow { margin-left: auto; color: var(--text-light); font-size: 1.1rem; }
+
+  /* FOOTER */
+  footer {
+    background: var(--green-900);
+    color: var(--green-100);
+    padding: 2.5rem;
+    text-align: center;
+  }
+  footer p { font-size: 0.875rem; opacity: 0.7; }
+  footer a { color: var(--green-200); text-decoration: none; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+  }
+  .fade-up-1 { animation-delay: 0.1s; }
+  .fade-up-2 { animation-delay: 0.25s; }
+  .fade-up-3 { animation-delay: 0.4s; }
+  .fade-up-4 { animation-delay: 0.55s; }
+  .fade-up-5 { animation-delay: 0.7s; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero::before { display: none; }
+    .hero-text { padding: 3rem 1.5rem 2rem; }
+    .hero-image { padding: 2rem 1.5rem 3rem; }
+    .photo-frame { width: 280px; height: 340px; }
+    .tag-1, .tag-2 { display: none; }
+    .about-grid, .resources-grid, .coaching-inner, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-cards { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+    .hero-stats { gap: 1.5rem; }
+    .subjects-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Mrs. Megha Anil Patil</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#coaching" class="nav-cta">Apply for Coaching</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge fade-up fade-up-1">Biology Educator & Mentor</div>
+    <h1 class="hero-title fade-up fade-up-2">
+      Mrs. Megha<br><em>Anil Patil</em>
+    </h1>
+    <p class="hero-subtitle fade-up fade-up-2">Making Biology Come Alive</p>
+    <p class="hero-desc fade-up fade-up-3">
+      Passionate biology educator with over 28 years of experience inspiring students to discover the wonders of life sciences — from cells to ecosystems.
+    </p>
+    <div class="hero-stats fade-up fade-up-3">
+      <div class="stat-item">
+        <div class="stat-num">28+</div>
+        <div class="stat-label">Years Teaching</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">All</div>
+        <div class="stat-label">Grades</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100s</div>
+        <div class="stat-label">Of Students</div>
+      </div>
+    </div>
+    <div class="hero-btns fade-up fade-up-4">
+      <a href="#coaching" class="btn-primary">Apply for Private Coaching</a>
+      <a href="#about" class="btn-outline">Learn More</a>
+    </div>
+  </div>
+
+  <div class="hero-image fade-up fade-up-3">
+    <div class="photo-frame">
+      <div class="photo-blob">
+        <div class="photo-placeholder">
+          <div class="photo-placeholder-icon">🌿</div>
+          <p class="photo-placeholder-text">Replace this with Mrs. Megha's photo by updating the img src below</p>
+        </div>
+        <!-- To add photo: replace the div above with:
+          <img src="YOUR_PHOTO_URL" alt="Mrs. Megha Anil Patil" />
+        -->
+      </div>
+      <div class="floating-tag tag-1">
+        <div class="tag-dot"></div>
+        28+ Years Experience
+      </div>
+      <div class="floating-tag tag-2">
+        <div class="tag-dot"></div>
+        All Grades Biology
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-quote">
+          <p>"Biology is not just a subject — it is the story of life itself. Every student who walks into my class leaves with a deeper love for the living world."</p>
+          <cite>— Mrs. Megha Anil Patil</cite>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon">🎓</div>
+            <h4>Expert Educator</h4>
+            <p>Trained biology teacher with deep subject expertise.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">📹</div>
+            <h4>Content Creator</h4>
+            <p>YouTube channel with biology lessons & insights.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">✍️</div>
+            <h4>Blogger</h4>
+            <p>Shares knowledge & tips on her popular blog.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🌱</div>
+            <h4>Lifelong Learner</h4>
+            <p>Always growing, always discovering alongside students.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">A Teacher Who Truly <em style="font-style:italic;color:var(--leaf)">Cares</em></h2>
+        <p>
+          With more than 28 years of dedicated teaching, Mrs. Megha Anil Patil has shaped the minds of hundreds of students across all grade levels. Her classroom is where curiosity meets knowledge — where the magic of biology unfolds lesson by lesson.
+        </p>
+        <p>
+          From botany to genetics, from human physiology to environmental science, Mrs. Patil's teaching style blends conceptual clarity with real-world examples that students remember for life.
+        </p>
+        <div class="highlights">
+          <div class="highlight-item">
+            <div class="highlight-dot"></div>
+            <p>Teaches Biology across all grade levels — primary to higher secondary</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-dot"></div>
+            <p>Creates accessible video content on YouTube for students at home</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-dot"></div>
+            <p>Available for personalized private coaching sessions</p>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-dot"></div>
+            <p>Known for patience, encouragement, and making complex topics simple</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <div class="container">
+    <div style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-tag">Subjects & Topics</span>
+      <h2 class="section-title">Biology in Every<br>Beautiful Form</h2>
+      <p class="section-lead" style="margin:0 auto;">From the smallest cell to the largest ecosystem — Mrs. Patil teaches it all, with passion and precision.</p>
+    </div>
+    <div class="subjects-grid">
+      <div class="subject-card">
+        <div class="subject-emoji">🔬</div>
+        <h3>Cell Biology</h3>
+        <p>Cell structure, function, division, and the microscopic world that forms the foundation of all life.</p>
+        <div class="subject-grades">
+          <span class="grade-pill">Class 9</span>
+          <span class="grade-pill">Class 10</span>
+          <span class="grade-pill">Class 11</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-emoji">🧬</div>
+        <h3>Genetics & Heredity</h3>
+        <p>DNA, inheritance, Mendel's laws, mutations, and the science of how traits are passed down.</p>
+        <div class="subject-grades">
+          <span class="grade-pill">Class 10</span>
+          <span class="grade-pill">Class 12</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-emoji">🌿</div>
+        <h3>Botany</h3>
+        <p>Plant anatomy, photosynthesis, reproduction, and the incredible diversity of the plant kingdom.</p>
+        <div class="subject-grades">
+          <span class="grade-pill">Class 6-10</span>
+          <span class="grade-pill">Class 11</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-emoji">🫀</div>
+        <h3>Human Physiology</h3>
+        <p>Systems of the human body — circulatory, nervous, digestive, respiratory — and how they work in harmony.</p>
+        <div class="subject-grades">
+          <span class="grade-pill">Class 8-12</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-emoji">🌍</div>
+        <h3>Ecology & Environment</h3>
+        <p>Ecosystems, biodiversity, food chains, and the urgent science of environmental conservation.</p>
+        <div class="subject-grades">
+          <span class="grade-pill">Class 7-10</span>
+          <span class="grade-pill">Class 12</span>
+        </div>
+      </div>
+      <div class="subject-card">
+        <div class="subject-emoji">🦠</div>
+        <h3>Microbiology</h3>
+        <p>Bacteria, viruses, fungi, and how microorganisms affect human health and the environment.</p>
+        <div class="subject-grades">
+          <span class="grade-pill">Class 11</span>
+          <span class="grade-pill">Class 12</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+  <div class="container">
+    <span class="section-tag">Resources & Channels</span>
+    <h2 class="section-title">Learn Beyond the Classroom</h2>
+    <p class="section-lead">Follow Mrs. Patil's content on YouTube, Instagram, and her blog for lessons, tips, and biology inspiration.</p>
+    <div class="resources-grid">
+      <a href="https://www.youtube.com/@mrs.meghapatil2006" target="_blank" class="resource-card">
+        <div class="resource-header yt">
+          <div class="resource-icon yt">▶</div>
+          <p class="resource-platform">YouTube</p>
+          <h3 class="resource-title">Mrs. Megha Patil</h3>
+        </div>
+        <div class="resource-body">
+          <p>Biology video lessons, exam tips, and subject explanations — subscribe for regular educational content that makes learning enjoyable.</p>
+          <span class="resource-link">Visit Channel</span>
+        </div>
+      </a>
+      <a href="https://meghapatils.blogspot.com/" target="_blank" class="resource-card">
+        <div class="resource-header blog">
+          <div class="resource-icon blog">✍️</div>
+          <p class="resource-platform">Blog</p>
+          <h3 class="resource-title">Megha Patil's Blog</h3>
+        </div>
+        <div class="resource-body">
+          <p>In-depth articles on biology topics, teaching insights, and helpful study guides written in a clear and engaging style.</p>
+          <span class="resource-link">Read the Blog</span>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/meghaanilpatil/" target="_blank" class="resource-card" style="grid-column: span 2;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr;">
+          <div class="resource-header ig" style="border-radius:0; border-top-left-radius: 1.25rem;">
+            <div class="resource-icon ig">📸</div>
+            <p class="resource-platform">Instagram</p>
+            <h3 class="resource-title">@meghaanilpatil</h3>
+          </div>
+          <div class="resource-body" style="display:flex; flex-direction:column; justify-content:center;">
+            <p>Follow on Instagram for daily biology snippets, behind-the-classroom moments, and motivational content for students.</p>
+            <span class="resource-link">Follow on Instagram</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING -->
+<section id="coaching">
+  <div class="container">
+    <div class="coaching-inner">
+      <div class="coaching-info">
+        <span class="section-tag">Private Coaching</span>
+        <h2 class="section-title">One-on-One Biology Coaching</h2>
+        <p class="section-lead">Get personalized attention, targeted doubt-solving, and a learning plan designed just for you.</p>
+        <div class="coaching-features">
+          <div class="coaching-feature">
+            <div class="coaching-feature-icon">📚</div>
+            <div class="coaching-feature-text">
+              <strong>All Grades Covered</strong>
+              Coaching available for Grade 6 all the way to Grade 12 Biology.
+            </div>
+          </div>
+          <div class="coaching-feature">
+            <div class="coaching-feature-icon">🎯</div>
+            <div class="coaching-feature-text">
+              <strong>Focused Learning</strong>
+              Topic-specific sessions or full syllabus coverage — as per your need.
+            </div>
+          </div>
+          <div class="coaching-feature">
+            <div class="coaching-feature-icon">📞</div>
+            <div class="coaching-feature-text">
+              <strong>Quick Response</strong>
+              Mrs. Patil will personally reach out after your application.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div id="coaching-form">
+          <h3 class="form-title">Apply for Coaching</h3>
+          <p class="form-subtitle">Fill in your details and we'll get back to you shortly.</p>
+          <div class="form-group">
+            <label for="f-name">Student's Full Name</label>
+            <input type="text" id="f-name" placeholder="Enter full name" />
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Phone Number</label>
+            <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="f-grade">Current Grade / Class</label>
+            <select id="f-grade">
+              <option value="" disabled selected>Select grade</option>
+              <option>Class 6</option>
+              <option>Class 7</option>
+              <option>Class 8</option>
+              <option>Class 9</option>
+              <option>Class 10</option>
+              <option>Class 11</option>
+              <option>Class 12</option>
+            </select>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Submit Application →</button>
+          <p style="font-size:0.75rem; color:#aaa; text-align:center; margin-top:1rem;">Your information will be saved securely for coaching enquiries.</p>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">🌿</div>
+          <h3>Application Received!</h3>
+          <p>Thank you! Mrs. Megha Patil will contact you soon at the number provided.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-lead" style="margin-bottom:2.5rem;">Have questions about coaching or biology? Don't hesitate to reach out.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <a href="tel:+919665189977">+91 96651 89977</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Maharashtra, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Availability</h4>
+            <p>Mon – Sat, 9 AM – 7 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-light);font-weight:500;margin-bottom:1rem;">Social & Online</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@mrs.meghapatil2006" target="_blank" class="social-link">
+            <div class="social-link-icon yt">▶️</div>
+            <div>
+              <div class="social-link-name">YouTube</div>
+              <div class="social-link-handle">@mrs.meghapatil2006</div>
+            </div>
+            <span class="social-link-arrow">↗</span>
+          </a>
+          <a href="https://www.instagram.com/meghaanilpatil/" target="_blank" class="social-link">
+            <div class="social-link-icon ig">📸</div>
+            <div>
+              <div class="social-link-name">Instagram</div>
+              <div class="social-link-handle">@meghaanilpatil</div>
+            </div>
+            <span class="social-link-arrow">↗</span>
+          </a>
+          <a href="https://meghapatils.blogspot.com/" target="_blank" class="social-link">
+            <div class="social-link-icon blog">✍️</div>
+            <div>
+              <div class="social-link-name">Blog</div>
+              <div class="social-link-handle">meghapatils.blogspot.com</div>
+            </div>
+            <span class="social-link-arrow">↗</span>
+          </a>
+          <a href="https://wa.me/919665189977" target="_blank" class="social-link">
+            <div class="social-link-icon" style="background:#e8faf0;">💬</div>
+            <div>
+              <div class="social-link-name">WhatsApp</div>
+              <div class="social-link-handle">+91 96651 89977</div>
+            </div>
+            <span class="social-link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Mrs. Megha Anil Patil · Biology Educator · <a href="tel:+919665189977">+91 96651 89977</a></p>
+  <p style="margin-top:0.5rem;">Made with 🌿 for a wonderful teacher</p>
+</footer>
+
+<script>
+// Google Sheets integration
+// IMPORTANT: Replace SHEET_URL below with your Google Apps Script Web App URL
+// Instructions:
+// 1. Open Google Sheets → Extensions → Apps Script
+// 2. Paste this code in Apps Script:
+/*
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  sheet.appendRow([new Date(), data.name, data.phone, data.grade]);
+  return ContentService.createTextOutput(JSON.stringify({status:'success'})).setMimeType(ContentService.MimeType.JSON);
+}
+*/
+// 3. Deploy as Web App → Anyone can access
+// 4. Copy the URL and replace SHEET_URL below
+
+const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+async function submitForm() {
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const grade = document.getElementById('f-grade').value;
+
+  if (!name || !phone || !grade) {
+    alert('Please fill in all fields before submitting.');
+    return;
+  }
+
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    if (SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+      await fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, grade })
+      });
+    }
+    document.getElementById('coaching-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  } catch (err) {
+    alert('Something went wrong. Please call directly: +91 96651 89977');
+    btn.textContent = 'Submit Application →';
+    btn.disabled = false;
+  }
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// Intersection observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.subject-card, .resource-card, .about-card, .social-link, .contact-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
